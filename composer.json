@@ -1,0 +1,17 @@
+{
+    "name": "los-romka/shop",
+    "autoload": {
+        "psr-4": {
+            "LosRomka\\Shop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "los-romka",
+            "email": "sin@drom.ru"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.4"
+    }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h1>Корзина {{ currentUser.name }}</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} x {{ counts[product.id] }}: {{ product.price.roubles }} рублей
+
+                <form action="/?action=remove_from_cart" method="post">
+                    <input name="product_id" type="hidden" value="{{ product.id }}">
+                    <input type="submit" value="REMOVE">
+                </form>
+            </li>
+        {% else %}
+            Корзина пуста
+        {% endfor %}
+    </ul>
+    <a href="/">Продукты</a>
+</div>
+</body>
+</html>
